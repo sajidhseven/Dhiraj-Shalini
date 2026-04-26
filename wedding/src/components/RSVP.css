@@ -1,0 +1,162 @@
+.rsvp-section {
+  background-color: var(--primary-red);
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  color: var(--gold);
+  border-top: 5px solid rgba(207, 176, 118, 0.3);
+  border-bottom: 5px solid rgba(207, 176, 118, 0.3);
+  overflow: hidden;
+}
+
+/* Elephant illustrations placeholders using standard css shapes to mimic the vibe */
+.elephant-left, .elephant-right {
+  position: absolute;
+  bottom: 20px;
+  width: 150px;
+  height: 150px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23cfb076" stroke-width="2" opacity="0.3"/></svg>'); /* Extremely simple placeholder for the intricate elephant SVG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.elephant-left {
+  left: 5%;
+}
+
+.elephant-right {
+  right: 5%;
+  transform: scaleX(-1);
+}
+
+.rsvp-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.gold-divider {
+  background: radial-gradient(circle, var(--gold) 2px, transparent 3px) center/15px 15px repeat-x;
+  margin-bottom: 20px;
+}
+
+.rsvp-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group.row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.message-wrapper {
+  flex: 2;
+}
+
+.input-wrapper i:first-child {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background-color: transparent;
+  border: 1px solid rgba(207, 176, 118, 0.4);
+  border-radius: 5px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+  appearance: none;
+}
+
+.input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-wrapper select {
+  color: rgba(255, 255, 255, 0.6);
+}
+.input-wrapper select option {
+  background-color: var(--primary-red);
+  color: #fff;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: var(--gold);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: var(--gold);
+  color: var(--primary-red);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .form-group.row {
+    flex-direction: column;
+  }
+  .elephant-left, .elephant-right {
+    display: none;
+  }
+}

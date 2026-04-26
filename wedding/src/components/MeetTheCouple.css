@@ -1,0 +1,169 @@
+.meet-couple {
+  background-color: var(--cream-bg);
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.floral-corner {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url('https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=400&auto=format&fit=crop'); /* using generic floral as placeholder */
+  background-size: cover;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.top-left {
+  top: -50px;
+  left: -50px;
+  border-radius: 50%;
+}
+
+.top-right {
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+}
+
+.section-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--primary-red);
+  margin-bottom: 15px;
+}
+
+.text-red {
+  color: var(--primary-red);
+}
+
+.ornate-divider {
+  width: 150px;
+  height: 20px;
+  margin: 0 auto;
+  background: radial-gradient(circle, var(--gold) 2px, transparent 3px) center/15px 15px repeat-x;
+}
+
+.couple-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.couple-card {
+  flex: 1;
+  max-width: 450px;
+  background-color: transparent;
+  padding: 15px;
+}
+
+.card-border {
+  border: 1px solid rgba(207, 176, 118, 0.4);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.groom-card .card-border {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.bride-card .card-border {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  flex-direction: row-reverse;
+}
+
+.portrait-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  text-align: left;
+}
+
+.bride-card .card-info {
+  text-align: right;
+}
+
+.name {
+  color: var(--primary-red);
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-family: var(--font-sans);
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.center-logo {
+  flex-shrink: 0;
+}
+
+.logo-circle.solid-red {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 15px rgba(92, 10, 19, 0.3);
+}
+
+.logo-circle.solid-red::before,
+.logo-circle.solid-red::after {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .couple-cards-container {
+    flex-direction: column;
+  }
+  .groom-card .card-border,
+  .bride-card .card-border {
+    border-radius: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-info, .bride-card .card-info {
+    text-align: center;
+  }
+  .center-logo {
+    margin: 20px 0;
+  }
+}
