@@ -8,7 +8,8 @@
   overflow: hidden;
   color: var(--gold);
   text-align: center;
-  padding-top: 80px; /* For navbar */
+  padding-top: 80px;
+  /* For navbar */
 }
 
 .hero-background {
@@ -35,8 +36,13 @@
   border-right: 2px solid rgba(207, 176, 118, 0.1);
 }
 
-.hero-background::before { left: 5%; }
-.hero-background::after { right: 5%; }
+.hero-background::before {
+  left: 5%;
+}
+
+.hero-background::after {
+  right: 5%;
+}
 
 .hero-content {
   position: relative;
@@ -66,7 +72,7 @@
   font-size: 5.5rem;
   color: var(--gold);
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
@@ -74,24 +80,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  width: 100%;
+  gap: 10px;
+  width: 60%;
+  margin: 0 auto 12px;
 }
 
-.divider-line span {
+.divider-rule {
   flex: 1;
   height: 1px;
-  background-color: var(--gold);
-  opacity: 0.5;
-  max-width: 150px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity: 0.7;
+  display: block;
+}
+
+.divider-ornament {
+  color: var(--gold);
+  font-size: 0.55rem;
+  opacity: 0.85;
+  flex-shrink: 0;
 }
 
 .tagline {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  color: #fff;
-  letter-spacing: 1px;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1.5px;
+  margin: 0 auto 25px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .wedding-date-hero {
@@ -149,7 +167,7 @@
 
 .groom-placeholder {
   left: 5%;
-  background-image: url('/groom_avatar.png'); 
+  background-image: url('/groom_avatar.png');
 }
 
 .bride-placeholder {
@@ -158,17 +176,36 @@
 }
 
 @media (max-width: 900px) {
-  .couple-names-hero { font-size: 4rem; }
-  .groom-placeholder, .bride-placeholder {
+  .couple-names-hero {
+    font-size: 4rem;
+  }
+
+  .groom-placeholder,
+  .bride-placeholder {
     width: 200px;
     height: 350px;
-    opacity: 0.4; /* reduce opacity on mobile to make text readable */
+    opacity: 0.4;
+    /* reduce opacity on mobile to make text readable */
   }
 }
 
 @media (max-width: 600px) {
-  .couple-names-hero { font-size: 3rem; }
-  .wedding-date-hero { font-size: 1.5rem; }
-  .tagline { font-size: 0.9rem; }
-  .groom-placeholder, .bride-placeholder { display: none; } /* Hide images on very small screens for better text view */
+  .couple-names-hero {
+    font-size: 3rem;
+  }
+
+  .wedding-date-hero {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .groom-placeholder,
+  .bride-placeholder {
+    display: none;
+  }
+
+  /* Hide images on very small screens for better text view */
 }

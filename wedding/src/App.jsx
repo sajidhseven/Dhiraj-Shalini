@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import InvitationVideo from './components/InvitationVideo';
@@ -9,9 +10,10 @@ import LocationsAndStory from './components/LocationsAndStory';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
 import FloatingHearts from './components/FloatingHearts';
+import Haldi from './components/Haldi';
 import './App.css';
 
-function App() {
+function HomePage() {
   useEffect(() => {
     // Simple Intersection Observer for fade-in animations
     const observer = new IntersectionObserver((entries) => {
@@ -48,4 +50,14 @@ function App() {
   );
 }
 
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/haldi" element={<Haldi />} />
+    </Routes>
+  );
+}
+
 export default App;
+

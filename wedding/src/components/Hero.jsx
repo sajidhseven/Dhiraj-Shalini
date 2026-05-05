@@ -11,12 +11,13 @@ const Hero = () => {
         </div>
         <p className="the-wedding-of">T H E &nbsp; W E D D I N G &nbsp; O F</p>
         <h1 className="couple-names-hero">Dhiraj & Shalini</h1>
-        
+
         <div className="divider-line">
-          <span></span>
-          <p className="tagline">Two hearts, one love, a lifetime together</p>
-          <span></span>
+          <span className="divider-ornament">✦</span>
+          <span className="divider-rule"></span>
+          <span className="divider-ornament">✦</span>
         </div>
+        <p className="tagline">Two hearts, one love, a lifetime together</p>
 
         <div className="wedding-date-hero">
           <span className="dot"></span>

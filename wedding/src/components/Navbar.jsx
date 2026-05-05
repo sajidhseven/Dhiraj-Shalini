@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -52,7 +53,7 @@ const Navbar = () => {
         <ul className="nav-links right-links desktop-only">
           <li><a href="#events">Events</a></li>
           <li><a href="#location">Location</a></li>
-          {/* <li><a href="#gallery">Gallery</a></li> */}
+          <li><Link to="/haldi">Haldi</Link></li>
           <li><a href="#rsvp">RSVP</a></li>
         </ul>
 
@@ -68,7 +69,7 @@ const Navbar = () => {
             <li><a href="#story" onClick={() => setMenuOpen(false)}>Our Story</a></li>
             <li><a href="#events" onClick={() => setMenuOpen(false)}>Events</a></li>
             <li><a href="#location" onClick={() => setMenuOpen(false)}>Location</a></li>
-            <li><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a></li>
+            <li><Link to="/haldi" onClick={() => setMenuOpen(false)}>Haldi</Link></li>
             <li><a href="#rsvp" onClick={() => setMenuOpen(false)}>RSVP</a></li>
           </ul>
         </div>
